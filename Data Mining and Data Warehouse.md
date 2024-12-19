@@ -154,7 +154,7 @@ Suppose we are given an **unknown fruit** with **Color = Red** and **Size = Smal
 We calculate the posterior probabilities for each class using Bayes' Theorem:
 
 \[
-P(Class | Features) = \frac{P(Features | Class) \cdot P(Class)}{P(Features)}
+P(Class | Features) = \frac {P(Features | Class) \cdot P(Class)}{P(Features)}
 \]
 
 Since \(P(Features)\) is the same for both classes, we only need to calculate the numerator.
