@@ -95,3 +95,4 @@ Unfortunately, I cannot display the full Apriori algorithm here due to space con
 4. **Model Training:** Train a classifier using algorithms (e.g., decision trees, SVM).
 5. **Model Evaluation:** Test the classifier on new data.
    **Example:** Classifying emails as 'spam' or 'not spam' based on keywords and patterns.
+<br><br>
