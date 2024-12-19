@@ -96,8 +96,9 @@ Unfortunately, I cannot display the full Apriori algorithm here due to space con
 5. **Model Evaluation:** Test the classifier on new data.
    **Example:** Classifying emails as 'spam' or 'not spam' based on keywords and patterns.
 <br><br>
-#hello
-To solve this classification problem using **Bayesian Classification**, we'll calculate probabilities and classify an unknown fruit as "Apple" or "Orange" based on its **Color** and **Size**.
+
+# hello
+## To solve this classification problem using **Bayesian Classification**, we'll calculate probabilities and classify an unknown fruit as "Apple" or "Orange" based on its **Color** and **Size**.
 
 ---
 
