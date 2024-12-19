@@ -96,3 +96,90 @@ Unfortunately, I cannot display the full Apriori algorithm here due to space con
 5. **Model Evaluation:** Test the classifier on new data.
    **Example:** Classifying emails as 'spam' or 'not spam' based on keywords and patterns.
 <br><br>
+#hello
+To solve this classification problem using **Bayesian Classification**, we'll calculate probabilities and classify an unknown fruit as "Apple" or "Orange" based on its **Color** and **Size**.
+
+---
+
+### **Dataset Summary**
+| **Fruit** | **Color** | **Size** |
+|-----------|-----------|----------|
+| Apple     | Red       | Small    |
+| Apple     | Red       | Large    |
+| Orange    | Orange    | Small    |
+| Orange    | Orange    | Large    |
+| Apple     | Red       | Small    |
+
+---
+
+### **Step 1: Calculate Priors**  
+The prior probabilities are the probabilities of each class (Apple or Orange) in the dataset.
+
+- Total number of fruits = 5  
+- **P(Apple)** = (Number of Apples) / (Total number of fruits)  
+  **P(Apple)** = 3 / 5 = 0.6  
+- **P(Orange)** = (Number of Oranges) / (Total number of fruits)  
+  **P(Orange)** = 2 / 5 = 0.4  
+
+---
+
+### **Step 2: Calculate Likelihoods**  
+We compute the likelihoods of **Color** and **Size** for each class.
+
+#### For Apple:
+- **P(Color = Red | Apple)** = (Number of Red Apples) / (Total Apples)  
+  **P(Color = Red | Apple)** = 3 / 3 = 1.0  
+- **P(Color = Orange | Apple)** = (Number of Orange Apples) / (Total Apples)  
+  **P(Color = Orange | Apple)** = 0 / 3 = 0.0  
+- **P(Size = Small | Apple)** = (Number of Small Apples) / (Total Apples)  
+  **P(Size = Small | Apple)** = 2 / 3 ≈ 0.67  
+- **P(Size = Large | Apple)** = (Number of Large Apples) / (Total Apples)  
+  **P(Size = Large | Apple)** = 1 / 3 ≈ 0.33  
+
+#### For Orange:
+- **P(Color = Red | Orange)** = (Number of Red Oranges) / (Total Oranges)  
+  **P(Color = Red | Orange)** = 0 / 2 = 0.0  
+- **P(Color = Orange | Orange)** = (Number of Orange Oranges) / (Total Oranges)  
+  **P(Color = Orange | Orange)** = 2 / 2 = 1.0  
+- **P(Size = Small | Orange)** = (Number of Small Oranges) / (Total Oranges)  
+  **P(Size = Small | Orange)** = 1 / 2 = 0.5  
+- **P(Size = Large | Orange)** = (Number of Large Oranges) / (Total Oranges)  
+  **P(Size = Large | Orange)** = 1 / 2 = 0.5  
+
+---
+
+### **Step 3: Classify an Unknown Fruit**
+Suppose we are given an **unknown fruit** with **Color = Red** and **Size = Small**.  
+We calculate the posterior probabilities for each class using Bayes' Theorem:
+
+\[
+P(Class | Features) = \frac{P(Features | Class) \cdot P(Class)}{P(Features)}
+\]
+
+Since \(P(Features)\) is the same for both classes, we only need to calculate the numerator.
+
+#### For Apple:
+\[
+P(Apple | Features) \propto P(Color = Red | Apple) \cdot P(Size = Small | Apple) \cdot P(Apple)
+\]
+\[
+P(Apple | Features) \propto 1.0 \cdot 0.67 \cdot 0.6 = 0.402
+\]
+
+#### For Orange:
+\[
+P(Orange | Features) \propto P(Color = Red | Orange) \cdot P(Size = Small | Orange) \cdot P(Orange)
+\]
+\[
+P(Orange | Features) \propto 0.0 \cdot 0.5 \cdot 0.4 = 0.0
+\]
+
+---
+
+### **Step 4: Classification**
+Since \(P(Apple | Features) > P(Orange | Features)\), the unknown fruit is classified as **Apple**.
+
+---
+
+### **Final Answer**
+The fruit is classified as **Apple**. Let me know if you'd like a breakdown of another classification scenario! 😊
